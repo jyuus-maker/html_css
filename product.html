@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart App</title>
+    <style>
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+        * {margin: 0; padding: 0;}
+        body {margin:0 10%; font-family: Pretendard;}
+        body.container {width : 80%; margin:0 auto;}
+        nav {background-color: black; padding: 10px 0px 10px 30px; }
+        nav a {margin:10px 10px 30px; color: #fff; font-weight: 400; text-decoration: none;}
+        div.hero {margin:0 auto; padding:60px 0; text-align: center; width:90%; }
+        div.hero h1 {font-weight: 800; padding-bottom: 10px; }
+        div.hero p {margin-bottom: 20px; }
+        div.hero img {border-radius: 20px; width:100%; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);}
+        div.features, div.qna {padding:30px 20px; width:90%; margin:0 auto;}
+        div.features h2 {margin-bottom: 15px;}
+        div.features .card {margin-bottom: 15px; padding: 20px; border: solid 1px #ccc; border-radius: 20px; 
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);}
+        div.features .card span {padding-bottom: 15px; font-weight:600; font-size: 1.1em;}
+        hr {height:1px; background-color:#ccc; border: 0;}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#">홈</a> <!--  a[href="#"]*3  -->
+        <a href="#">기능</a>
+        <a href="#">문의</a>
+    </nav>
+
+    <div class="container"> <!--사진부터 강력한 보안-->
+        <div class="hero" id="home">
+            <h1>SmartApp 3.0</h1>
+            <p>더 빠르고, 더 스마트하게</p>
+            <a href="https://file.notion.so/f/f/d138a113-8c87-8175-92d2-00030355c10c/4b6bcba8-969d-4fee-91c7-cd989f77c565/backg.jpg?table=block&id=3a58a113-8c87-8022-81c6-ea0c45564cb5&spaceId=d138a113-8c87-8175-92d2-00030355c10c&expirationTimestamp=1784815200000&signature=xHZBAF9cHBqYdU9NQdXlPRlkhkerxSKHrUxunq7OkUA&downloadName=backg.jpg"><img src="https://file.notion.so/f/f/d138a113-8c87-8175-92d2-00030355c10c/4b6bcba8-969d-4fee-91c7-cd989f77c565/backg.jpg?table=block&id=3a58a113-8c87-8022-81c6-ea0c45564cb5&spaceId=d138a113-8c87-8175-92d2-00030355c10c&expirationTimestamp=1784815200000&signature=xHZBAF9cHBqYdU9NQdXlPRlkhkerxSKHrUxunq7OkUA&downloadName=backg.jpg" art="풍경사진"></a>
+        </div>
+
+        <hr>
+
+        <div class="features">
+            <h2>주요 기능</h2>
+            <div class="card">
+                <span>✨빠른속도</span>
+                <p>이전 버전 대비 2배 빨라진 성능을 경험하세요.</p>
+            </div>
+            <div class="card">
+                <span>🎞강력한 보안</span>
+                <p>최신 암호화 기술로 데이터를 안전하게 보호합니다.</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="qna" >
+                <h2>문의하기</h2>
+                <p>이메일 <a href="mailto:hello@smartapp.com">hello@smartapp.com</a></p>
+        </div>
+    
+        <footer>
+        </footer>
+    </div>
+
+</body>
+</html>
