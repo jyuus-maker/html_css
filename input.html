@@ -6,8 +6,9 @@
     <title>Document</title>
     <style>
         body {width:400px; }
-        form p label {display: inline-block; padding: 2px 0 0 24px; width:90px; text-align: right;}
-        form p input {padding:10px 15px; border: solid 1px #ccc; border-radius: 20px; font-size: 1.05em;}
+        form p label {display: inline-block; padding: 2px 0 0 24px; width:80px; text-align: right;}
+        form p input, select, textarea {padding:10px 15px; border: solid 1px #ccc; border-radius: 20px; font-size: 1.05em;}
+        form p textarea {resize: none}
         form p button {padding:10px 15px; width:100%; background-color: #000; color: #fff; border: 0; border-radius: 20px; font-size: 1.05em;  text-align: center;}
 
     </style>
@@ -17,27 +18,67 @@
     <hr>
     <form action="#" method="post">
         <p>
-            <label>이름 : </label>
-            <input type="text" name="username" placeholder="홍길동" />
+            <label for="userid">아이디 : </label> <!--for="userid" input 아이디를 써주면 써도 오토포커스 작동함-->
+            <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." required autofocus/> <!-- required = 필수입력시킴 -->
         </p>
         <p>
-            <label>아이디 : </label>
-            <input type="text" name="userid" id="userid" required /> <!-- required = 필수입력 -->
+            <label for="pwd">비밀번호 : </label>
+            <input type="password" name="pwd" id="pwd" required /> <!--화면에 **** 라고 보여지게 하기 위해서 -->
         </p>
         <p>
-            <label>이메일 : </label>
-            <input type="email" name="email" placeholder="hong@gildong.com" /> 
+            <label for="username">이름 : </label>
+            <input type="text" name="username" id="username" placeholder="홍길동" />
         </p>
         <p>
-            <label>비밀번호 : </label>
-            <input type="password" name="pwd"  />
+            <label for="useremail">이메일 : </label>
+            <input type="email" name="useremail" id="useremail" placeholder="메일주소를 입력해주세요." required/> 
         </p>
         <hr>
         <p>
+            <label>성별 : </label>
+            <input type="radio" name="gender" value="m" /> 남,
+            <input type="radio" name="gender" value="f" /> 여
+        </p>
+        <p>
+            <label>관심분야 : </label>
+            <input type="checkbox" name="hobby" value="sports" /> 운동 &nbsp;
+            <input type="checkbox" name="hobby" value="music" /> 음악 &nbsp;
+            <input type="checkbox" name="hobby" value="book" /> 독서 &nbsp;
+            <input type="checkbox" name="hobby" value="yoga" /> 요가 &nbsp;
+        </p>
+        <p>
+            <label>지역 : </label>
+            <select name="region" size="1" multiple> <!--여러개 선택하게 하고 싶으면 multiple -->
+                <optgroup label="프론트엔드">
+                    <option value="seoul">서울</option>
+                    <option value="busan">부산</option>
+                    <option value="incheon">인천</option>
+                    <option value="daejeon">대전</option>
+                    <option value="deagu">대구</option>
+                </optgroup>
+                <optgroup label="백엔드">
+                    <option value="seoul">서울</option>
+                    <option value="busan">부산</option>
+                    <option value="incheon">인천</option>
+                    <option value="daejeon">대전</option>
+                    <option value="deagu">대구</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label>자기소개 : </label>
+            <textarea name="intro" id="intro" cols="30" rows="5" maxlength="100" placeholder="100자 이내"></textarea>
+        </p>
+        <p>
+            <label>이용동의 : </label>
+            <input type="checkbox" name="hobby" value="useagree" /> (필수) 이용약관 동의 &nbsp;
+            <input type="checkbox" name="hobby" value="mailagree" /> (선택) 메일수신 동의 &nbsp;
+        </p>
+        <p>
             <button type="submit">가입하기</button>
         </p>
-
-
+            
+            
     </form>
 
 </body>
