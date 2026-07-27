@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css_grid/css_grid.css" rel="stylesheet">
+    <style>
+        body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 18px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+        .box.solid {
+        background: #2f5de0;
+        border-color: #2f5de0;
+        color: #fff;
+      }
+
+      .hd {
+        grid-area: header;
+      }
+      .nv {
+        grid-area: nav;
+      }
+      .mn {
+        grid-area: main;
+      }
+      .as {
+        grid-area: aside;
+      }
+      .ft {
+        grid-area: footer;
+      }
+
+      .page {
+        display:grid;
+        grid-template-columns: 170px 1fr 150px;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header header"
+          "nav    main   aside"
+          "nav    main   aside"
+          "footer footer footer";
+        gap: 10px;
+        min-height: 420px;
+      }
+      /* @media : 특정 조건일 때만 스타일을 적용 : 반응형 웹을 구성하는 조건 구성 */
+      @media (max-width:640px) {
+        .page {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr auto auto;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "aside"
+                "footer";
+        }
+      }
+
+
+    </style>
+</head>
+<body>
+    <h1>문제 06 · 이름표로 짜는 페이지 골격</h1>
+    <p class="goal">
+        목표: grid-template-areas를 사용하여 페이지 골격을 완성하세요.
+    </p>
+    <div class="page">
+        <div class="box solid hd">header</div>
+        <div class="box nv">nav</div>
+        <div class="box mn">main</div>
+        <div class="box as">aside</div>
+        <div class="box ft">footer</div>
+    </div>
+</body>
+</html>

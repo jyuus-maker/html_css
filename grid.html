@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); 
+            열이 컨테이너를 가득 채우도록 늘어난다면(예: fr 단위 사용), 
+            분배할 남은 여백이 없기 때문에 justify-content를 적용해도 아무런 시각적 변화가 없다. */
+            grid-template-columns: 70px 70px 70px;
+            
+            gap: 10px;
+            margin: 0 auto;
+            max-width: 600px;
+            min-height: 100vh;
+            place-items: center;
+            place-content:center;
+            justify-content: space-evenly;
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content:center; */
+        }
+        .container .item {
+            background-color: #f0f0f0;
+            max-width: 100px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

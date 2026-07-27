@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /* 1fr씩 총 4열로 분할 (itm2가 2칸을 먹을 수 있도록 여유 확보) */
+            grid-template-columns: repeat(6, 1fr); 
+            /* 1행의 높이를 100px로 확실하게 지정 */
+            grid-template-rows: 100px; 
+            gap: 10px;
+    
+            /* ⚠️ 만약 여기에 place-items: center; 가 있다면 지우거나 stretch로 변경해야 박스가 늘어납니다 */
+            place-items: stretch; 
+            margin: 0 auto;
+            max-width: 600px;
+            justify-content:space-evenly;
+
+        }
+        .container .item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .container .itm1 { grid-row: 1 / 2; grid-column: 1 / -1;     /* 전체 너비 ← 자주 씀 */ } 
+        .container .itm2 { grid-row: 2 / 5; grid-column: 1 / 3; } 
+        .container .itm3 { grid-row: 2 / 4; grid-column: 3 / span 3;  } 
+        .container .itm4 { grid-row: 2 / 4; grid-column: 6 / 7;  } 
+        .container .itm5 { grid-row: 4 / 5; grid-column: 3 / span 4; } 
+        .container .itm6 { grid-row: 5 / 6; grid-column: 1 / -1;} 
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item itm1">1</div>
+        <div class="item itm2">2</div>
+        <div class="item itm3">3</div>
+        <div class="item itm4">4</div>
+        <div class="item itm5">5</div>
+        <div class="item itm6">6</div>
+    </div>
+</body>
+</html>

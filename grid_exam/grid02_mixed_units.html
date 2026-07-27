@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제2 · 고정 + 유동 + 자동</title>
+    <style>
+     
+      body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 28px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 22px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 14px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+      .box.solid {
+        background: #2f5de0;
+        border-color: #2f5de0;
+        color: #fff;
+      }
+      .box small {
+        display: block;
+        font-weight: normal;
+        font-size: 11px;
+        opacity: 0.85;
+        margin-top: 4px;
+      }
+
+      
+      .board {
+        display: grid;
+        grid-template-columns: 200px 1fr auto;
+        
+        gap: 12px;
+        height: 150px; 
+
+        place-items: center stretch;
+       
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>문제 02 · 고정 + 유동 + 자동</h1>
+    <p class="goal">px · fr · auto 의 차이와 place-items 의 값 순서 익히기</p>
+
+    <div class="board">
+      <div class="box">사이드바<small>200px 고정</small></div>
+      <div class="box solid">본문<small>1fr · 남은 공간 전부</small></div>
+      <div class="box">메뉴<small>auto · 글자만큼</small></div>
+    </div>
+
+   </body>
+</html>

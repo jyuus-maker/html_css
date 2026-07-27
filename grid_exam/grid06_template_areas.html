@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제6 · grid-template-areas</title>
+    <style>
+      body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 18px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+      .box.solid {
+        background: #2f5de0;
+        border-color: #2f5de0;
+        color: #fff;
+      }
+
+      .hd {
+        grid-area: header;
+      }
+      .nv {
+        grid-area: nav;
+      }
+      .mn {
+        grid-area: main;
+      }
+      .as {
+        grid-area: aside;
+      }
+      .ft {
+        grid-area: footer;
+      }
+
+      .page {
+        display: grid;
+        grid-template-columns: 170px 1fr 150px;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header header"
+          "nav    main   aside"
+          "footer footer footer";
+        gap: 10px;
+        min-height: 420px;
+      }
+
+       @media (max-width: 640px) {
+        .page {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 1fr auto auto;
+          grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>문제 06 · 이름표로 짜는 페이지 골격</h1>
+    <p class="goal">
+      창 너비를 640px 아래로 줄이면 배치도만 바뀌어 세로로 쌓입니다
+    </p>
+
+    <div class="page">
+      <div class="box solid hd">header</div>
+      <div class="box nv">nav</div>
+      <div class="box mn">main</div>
+      <div class="box as">aside</div>
+      <div class="box ft">footer</div>
+    </div>
+
+</body>
+</html>

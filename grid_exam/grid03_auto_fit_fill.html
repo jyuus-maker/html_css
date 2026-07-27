@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제3 · auto-fit vs auto-fill</title>
+    <style>
+      body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 28px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 22px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 15px;
+        margin: 26px 0 10px;
+        color: #2f5de0;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 18px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+      .stage {
+        border: 1px dashed #cbdcf7;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .cards-fit {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+      }
+
+     
+      .cards-fill {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>문제 03 · 미디어쿼리 없는 반응형 카드</h1>
+    <p class="goal">
+      창 너비를 천천히 줄였다 늘리면서 두 영역의 차이를 비교하세요
+    </p>
+
+    <h2>A. auto-fit — 카드가 남은 공간을 나눠 가진다</h2>
+    <div class="stage">
+      <div class="cards-fit">
+        <div class="box">카드 1</div>
+        <div class="box">카드 2</div>
+        <div class="box">카드 3</div>
+      </div>
+    </div>
+
+    <h2>B. auto-fill — 빈 트랙이 그대로 남는다</h2>
+    <div class="stage">
+      <div class="cards-fill">
+        <div class="box">카드 1</div>
+        <div class="box">카드 2</div>
+        <div class="box">카드 3</div>
+      </div>
+    </div>
+
+</body>
+</html>

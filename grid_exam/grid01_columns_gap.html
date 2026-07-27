@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제1 · 3열 카드 갤러리</title>
+    <style>
+     
+      body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 28px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 22px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+
+      /* 그리드 */
+      .gallery {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 16px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>문제 01 · 3열 카드 갤러리</h1>
+    <p class="goal">
+      display:grid + grid-template-columns + gap 만으로 균등 배치 만들기
+    </p>
+
+    <div class="gallery">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+
+</body>
+</html>

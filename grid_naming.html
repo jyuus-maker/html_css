@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            /* 1. 부모에서 전체 열과 행의 크기를 먼저 규정 */
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-rows: auto; */
+            grid-template-rows: 60px 150px 150px 60px; 
+            gap: 20px;
+
+    /* 2. 자식들이 들어갈 도면을 시각적으로 펼침 */
+            grid-template-areas: 
+                "header header header header"
+                "nav    main   main   aside"
+                "nav    main   main   aside1"
+                "footer footer footer footer";
+}
+        .container .item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .hd { grid-area: header; }
+        .nv { grid-area: nav; }
+        .mn { grid-area: main; }
+        .as { grid-area: aside; }
+        .ft { grid-area: footer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item hd">1</div>
+        <div class="item nv">2</div>
+        <div class="item mn">3</div>
+        <div class="item as">4</div>
+        <div class="item as1">5</div>
+        <div class="item ft">6</div>
+    </div>
+</body>
+</html>

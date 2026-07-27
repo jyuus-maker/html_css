@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제4 · content vs items</title>
+    <style>
+      body {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        margin: 28px;
+        color: #12213a;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p.goal {
+        margin: 0 0 22px;
+        color: #4b5b72;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 15px;
+        margin: 26px 0 10px;
+        color: #2f5de0;
+      }
+      .box {
+        background: #e4ecfb;
+        border: 1px solid #cbdcf7;
+        border-radius: 6px;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: #1b3b78;
+      }
+      .stage {
+        background: #fbfcfe;
+        border: 1px solid #dce6f2;
+        border-radius: 8px;
+        padding: 10px;
+      }
+ */
+      .track {
+        display: grid;
+        grid-template-columns: 64px 64px 64px;
+        grid-template-rows: 52px 52px;
+        gap: 8px;
+        height: 200px;
+
+        justify-content: space-evenly; 
+        align-content: space-evenly; 
+      }
+
+      .cell {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+        height: 200px;
+
+        justify-items: center;
+        align-items: center;
+       }
+
+     
+      .cell .box:nth-child(3) {
+        justify-self: end;
+        align-self: start;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>문제 04 · content 와 items 는 무엇을 움직이는가</h1>
+    <p class="goal">
+      이름이 비슷하지만 움직이는 대상이 다릅니다 — 가장 많이 틀리는 부분
+    </p>
+
+    <h2>A. justify-content / align-content — 격자 전체가 이동</h2>
+    <div class="stage">
+      <div class="track">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </div>
+
+    <h2>
+      B. justify-items / align-items — 칸 안에서만 이동 (3번은 self 로 예외)
+    </h2>
+    <div class="stage">
+      <div class="cell">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </div>
+  </body>
+</html>
